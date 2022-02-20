@@ -24,7 +24,7 @@
         user-select: none;
       }
 
-      @media (min-width: 768px) {
+      @media (min-width: 300px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
@@ -56,26 +56,23 @@
       <nav class="navbar navbar-expand navbar-dark fixed-top shadow-lg bg-dark">
         <div class="container-fluid">
           <!-- icon -->
-          <a href="#" class="navbar-brand align-items-center">
+          <a href="index.html" class="navbar-brand align-items-center">
             <img src="image/software-engineer.png" alt="" width="40" height="40">
             <strong>Miigun's Blog</strong>
           </a>
           <!-- 漢堡選單 -->
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
             <span class="navbar-toggler-icon"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
           </button>
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-              <li class="active">
+              <li>
                 <a class="nav-link active" href="#">關於我</a>
               </li>
-              <li class="active">
+              <li>
                 <a class="nav-link active"  href="#project">專案</a>
               </li>
-              <li class="active">
+              <li>
                 <a class="nav-link active" href="https://sites.google.com/smail.nchu.edu.tw/pmtelab">研究室網頁</a>
               </li>
             </ul>
@@ -129,7 +126,7 @@
                 <li>協助開發排程演算法</li>
               </ul>
             </p>
-            <p><a class="btn btn-success" href="/internExp/internExp.html" id="project">View details &raquo;</a></p>
+            <p><a class="btn btn-success" href="/internExp/internExp.html">View details &raquo;</a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
             <img src="image/coding.jpg" alt="" class="rounded-circle" width="140" height="140">
@@ -142,7 +139,7 @@
 
 
         <!-- START THE FEATURETTES -->
-        <h1>個人專案</h1>
+        <h1 id="project">個人專案</h1>
         <hr class="featurette-divider">
         <div class="row g-5">
           <div class="col-md-9">
