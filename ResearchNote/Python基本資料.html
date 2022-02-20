@@ -1,4 +1,7 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Python基本資料處理</title><style>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Python基本資料處理</title>
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+
 /* cspell:disable-file */
 /* webkit printing magic: print all background colors */
 html {
@@ -654,54 +657,55 @@ blockquote {
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
 }
 	
-</style></head><body><article id="c392d1ae-e736-48aa-a6e1-431b32043341" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/solid_yellow.png" style="object-position:center 40%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">📚</span></div><h1 class="page-title">Python基本資料處理</h1></header><div class="page-body"><h2 id="db29ceeb-fbc9-4a1a-8ca1-b046e6ed1c7c" class="">資料結構-陣列處理</h2><ul id="41fa32f1-195b-4a09-a2c7-3636e1b2a9d2" class="toggle"><li><details open=""><summary>List陣列複製問題</summary><p id="283efda3-3ab5-4eb1-8616-899171c58361" class="">EX:  下方程式碼執行結果，b_list 記憶體位址指向a_list，所以當a陣列元素改變時，b也會跟隨改變。</p><pre id="3502f2df-a58e-4a83-a97b-7230f89b9a40" class="code"><code>a = [[1,2,3], 3, 3, 1]
-b = a
-a[0][1] = 0
+</style></head><body><article id="7694f07d-470d-4608-accb-b8f76838435c" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 50%"/><h1 class="page-title">Python基本資料處理</h1></header><div class="page-body"><h2 id="c18f9e7a-da1b-414d-898e-86121a9654de" class="">資料結構-陣列處理</h2><ul id="6eb04474-fd59-49a3-983e-a98a882bb023" class="toggle"><li><details open=""><summary>List陣列複製問題</summary><p id="74d6ee05-680f-4227-8d36-7ae9e492fe35" class="">EX:  下方程式碼執行結果，b_list 記憶體位址指向a_list，所以當a_list元素改變時，b_list 也會跟隨改變。</p><pre id="c3fc7e84-403a-4c72-b85a-2ac92f05f71c" class="code"><code>a_list = [[1,2,3], 3, 3, 1]
+b_list = a_list # b_list為pointer
+a_list[0][1] = 0
 
 #result
-# a = [[1,0,3], 3, 3, 1]
-# b = [[1,0,3], 3, 3, 1]
+# a_list = [[1,0,3], 3, 3, 1]
+# b_list = [[1,0,3], 3, 3, 1]
+
 # id 查詢記憶體編號
-id(a)
+id(a_list)
 Out[20]: 1802798924800
-id(b)
-Out[21]: 1802798924800</code></pre><p id="1712acf2-69e1-42b7-93a7-e25d5c16aab5" class="">但如果a_list重新宣告新的list，則新a_list會指派到新的記憶體，b_list則繼續留在原來的記憶體。</p><pre id="0dad4f82-cb44-4376-91a1-16ebffbf1ab0" class="code"><code>a = [[1,2,3], 3, 3, 1]
-b = a
-a = [1, 2, 3]
+id(b_list)
+Out[21]: 1802798924800</code></pre><p id="043698ff-bf18-4889-b195-ab215c3ab224" class="">但如果a_list重新宣告新的list，則新a_list會指派到新的記憶體，b_list則繼續留在原來的記憶體。</p><pre id="92d67471-65f8-4fdf-9043-3576de457613" class="code"><code>a_list = [[1,2,3], 3, 3, 1]
+b_list = a_list
+a_list = [1, 2, 3]
 
 #result
-# a = [1, 2, 3]
-# b = [[1,2,3], 3, 3, 1]
+# a_list = [1, 2, 3]
+# b_list = [[1,2,3], 3, 3, 1]
 # id 查詢記憶體編號
-a = [1,2,3]
+a_list = [1,2,3]
 
-id(a)
+id(a_list)
 Out[25]: 1802794696128
 
-b = a
+b_list = a_list
 
-id(b)
+id(b_list)
 Out[27]: 1802794696128
 
-a = [1,1,1]
+a_list = [1,1,1]
 
-id(a)
+id(a_list)
 Out[29]: 1802797521024
 
-id(b)
-Out[30]: 1802794696128</code></pre><p id="8a3c4da0-c8f9-4da3-b3b3-0110b2b1fe3c" class="">Python有提供一個陣列複製方法 copy，確認複製到的是值(value)而不是位址(addreass)</p><pre id="97071a29-289b-4766-a933-2ed080a4dd0b" class="code"><code>import copy
-a = [1, 2, 3, 4]
-b = copy.copy(a)
+id(b_list)
+Out[30]: 1802794696128</code></pre><p id="3444b6af-3049-47fe-9e37-692b9b48508e" class="">Python有提供一個陣列複製方法 copy，確認複製到的是值(value)而不是位址(addreass)</p><pre id="eda1af43-b812-47d6-81fd-e62067a77b13" class="code"><code>import copy
+a_list = [1, 2, 3, 4]
+b_list = copy.copy(a)
 
-id(a) 
+id(a_list) 
 OUT[31]: 2340117387520
 
-id(b)
+id(b_list)
 OUT[32]: 2340087539584
-# 兩者id位址不同，確定是copy到value</code></pre><p id="eca333b9-35f6-485d-88e1-4bfc92eb6536" class="">二維陣列複製必須使用deepcopy</p><pre id="4b7f1625-1bc5-4eee-b4b9-174f2751b2b1" class="code"><code>import copy
-a = [[2,3],[1,4]]
-b = copy.deepcopy(a)
-# copy.copy淺複製只能處理一維的list複製，copy.deepcopy深複製則可以處理二維以上的list複製</code></pre></details></li></ul><ul id="be729e9f-63b4-4014-868e-10903530671f" class="toggle"><li><details open=""><summary>Numpy Array資料處理</summary><ul id="b020ab73-0c7e-4e4e-9627-dde9d63d9924" class="bulleted-list"><li style="list-style-type:disc">Array slice</li></ul><p id="7acaaea5-97d0-42a3-a621-b7962fe4ff18" class="">二維資料切割</p><pre id="212b85a3-285e-4dc6-9650-90b2d2eac9e7" class="code"><code># split input and output
+# 兩者id位址不同，確定是copy到value</code></pre><p id="0ed90c53-9707-408f-9e87-364ce183279f" class="">二維陣列複製必須使用deepcopy</p><pre id="7af64d5f-80d5-4e1c-95b5-463f2d5d947a" class="code"><code>import copy
+a_list = [[2,3],[1,4]]
+b_list = copy.deepcopy(a_list)
+# copy.copy淺複製只能處理一維的list複製，copy.deepcopy深複製則可以處理二維以上的list複製</code></pre></details></li></ul><ul id="676494d2-a752-4099-b0fd-94374db89891" class="toggle"><li><details open=""><summary>Numpy Array資料處理</summary><ul id="209c9f28-5e99-4073-b6e3-f3bcb4e18355" class="bulleted-list"><li style="list-style-type:disc">Array slice</li></ul><p id="87ce6a85-0273-4e1f-b2ce-eb36ea633fd0" class="">二維資料切割</p><pre id="8cbc30c1-077f-4371-b5fe-2fbc6134e8c5" class="code"><code># split input and output
 from numpy import array
 # define array
 data = array([[11, 22, 33],
@@ -717,27 +721,27 @@ print(y)
 # [44 55]
 # [77 88]]
 
-#[33 66 99]</code></pre></details></li></ul><ul id="4e14693f-509f-422a-b8aa-975b39998792" class="toggle"><li><details open=""><summary>List進階排序</summary><h3 id="3c705b96-41f8-4ecd-9bd4-39c061283ca3" class="">第一種方法</h3><p id="611421c8-28e5-4cce-bdf6-36e9d76e8812" class="">若有兩個陣列分別為a_list, b_list，a_list做大小排序，a_list內元素對應b_list的元素也要跟隨著排列，可以將a_list排序的index紀錄下來，再套用在b_list。</p><p id="e71bc5b9-f875-4291-95b8-d19260d771bb" class="">EX:</p><pre id="debb1217-87e7-46d3-8eec-1314b05e4869" class="code"><code>a = [3,1,4,6,2,1]
-b = [4,5,2,1,2,3]</code></pre><p id="68541fa2-e25e-4ee0-b48d-1cf81c5668b1" class="">a 做 小→大 排序</p><pre id="82a0bde6-c09a-4052-9c22-c04e982044f5" class="code"><code>#sort(a)
+#[33 66 99]</code></pre></details></li></ul><ul id="57fbca55-d591-4269-a9cf-26ef39d946a8" class="toggle"><li><details open=""><summary>List進階排序</summary><h3 id="70a73b59-a260-483a-ac3a-4f1242c3e648" class="">第一種方法</h3><p id="283ca62d-932f-4d48-8d93-274ccf036840" class="">若有兩個陣列分別為a_list, b_list，a_list做大小排序，a_list內元素對應b_list的元素也要跟隨著排列，可以將a_list排序的index紀錄下來，再套用在b_list。</p><p id="69004780-79e8-4a1a-8a10-26b75a54f7e3" class="">EX:</p><pre id="8e2694a1-54d0-480c-8f52-34509974e21f" class="code"><code>a = [3,1,4,6,2,1]
+b = [4,5,2,1,2,3]</code></pre><p id="5f10d3a3-fc46-4e2e-a0fb-435279056df9" class="">a 做 小→大 排序</p><pre id="6c56f199-8d82-4ea7-8036-355c2b2c7b53" class="code"><code>#sort(a)
 index_list = sorted(range(len(a)), key = lambda k: a[k])
 &quot;&quot;&quot;說明: range(len(a)) = [0, 1, 2, 3, 4, 5]內元素依依帶入lambda，迭代出a排列小至大的key 
 list 再利用key list排序range(len(a))存入index_list&quot;&quot;&quot;
 # OUT: 
 a = [1,1,2,3,4,6]
-index_list = [1,5,4,0,2,3]</code></pre><p id="15f01ed4-ef5e-4dc3-870c-ba497e9f7d4f" class="">index_list為a_list排序紀錄下來的index變動位置，b_list可以依照index_list進行排列</p><pre id="f03a00af-561e-4995-aeb0-5dd8107f8d6d" class="code"><code>temp = []
+index_list = [1,5,4,0,2,3]</code></pre><p id="f768e6ae-ef8c-4206-9951-56618c38bb3c" class="">index_list為a_list排序紀錄下來的index變動位置，b_list可以依照index_list進行排列</p><pre id="e133c37d-4d26-4a68-9f0d-b368187ec07a" class="code"><code>temp = []
 for i in index_list:
 		temp.append(b[i])
-b = copy(temp)</code></pre><h3 id="88cb31bd-168f-4ceb-a9b1-535795d84af0" class="">第二種方法</h3><p id="7f89edb8-0308-45fc-b117-59f4a577dfbb" class="">先利用zip將a_list與b_list鏈起來</p><pre id="4834a926-0bdb-4b94-875e-662d28bddf7c" class="code"><code>zip_list = list(zip(a, b))
-# OUT: [(3, 4), (1, 5), (4, 2), (6, 1), (2, 2), (1, 3)]</code></pre><p id="444b49da-15d0-431b-974c-de2fd53b61ef" class="">再透過sorted排序zip_list的子陣列zip_list[0](就是原來的a_list)</p><pre id="e507dd57-e49e-43f6-bfdf-5b08521c2942" class="code"><code>arr_zip_list = sorted(zip_list, key=lambda z: zip_list[0])
-# OUT: [(1, 5), (1, 3), (2, 2), (3, 4), (4, 2), (6, 1)]</code></pre><p id="4a6cfcd7-05c4-4e77-a624-46dae57dea9b" class="">最後再解zip</p><pre id="8efdfd59-c172-4e37-850a-0d7fdefa2c1e" class="code"><code>unzip_list = list(zip(*arr_zip_list))
+b = copy(temp)</code></pre><h3 id="0a7ee10c-dc5e-4a52-af1a-fd34333e19d4" class="">第二種方法</h3><p id="9ddf0bcd-3900-4273-ab25-73077ba36d7f" class="">先利用zip將a_list與b_list鏈起來</p><pre id="13a84404-0c48-4c88-9178-1a649385c573" class="code"><code>zip_list = list(zip(a, b))
+# OUT: [(3, 4), (1, 5), (4, 2), (6, 1), (2, 2), (1, 3)]</code></pre><p id="5d5f3809-d721-486d-8992-48826b804993" class="">再透過sorted排序zip_list的子陣列zip_list[0](就是原來的a_list)</p><pre id="b2ded2c3-402d-428e-95ba-4ccdf2aa8611" class="code"><code>arr_zip_list = sorted(zip_list, key=lambda z: zip_list[0])
+# OUT: [(1, 5), (1, 3), (2, 2), (3, 4), (4, 2), (6, 1)]</code></pre><p id="040399d1-dd1a-4a99-84fe-f93a0453dd45" class="">最後再解zip</p><pre id="3b1b7a21-69e5-40ae-9f27-0b81d7eb5305" class="code"><code>unzip_list = list(zip(*arr_zip_list))
 # OUT: [(1, 1, 2, 3, 4, 6), (5, 3, 2, 4, 2, 1)]
-unzip_list[1] # 即為跟著a_list排序完成的b_list</code></pre></details></li></ul><ul id="377e052b-58e4-4b20-ae3e-ba30ebadb44f" class="toggle"><li><details open=""><summary>list元素交換</summary><p id="14ab0453-a952-4f42-92f2-6265b0cbbe4b" class="">若有a, b兩陣列，可直接透過程式碼第4行的方法進行交換，不需藉由第三變數暫存。</p><pre id="81fbcbdb-82c6-4640-8342-94b46ed4bc68" class="code"><code>a = [[1,1],[2,2]]
+unzip_list[1] # 即為跟著a_list排序完成的b_list</code></pre></details></li></ul><ul id="43b672dd-03dc-46b4-9ed0-eb4a1d07621c" class="toggle"><li><details open=""><summary>list元素交換</summary><p id="915d2e0b-91b4-40fa-bbc1-af8ee4af6b48" class="">若有a, b兩陣列，可直接透過程式碼第4行的方法進行交換，不需藉由第三變數暫存。</p><pre id="5ad190d8-9050-4faa-80a2-599dadaedf17" class="code"><code>a = [[1,1],[2,2]]
 b = [[3,3],[4,4]]
 
 a[0], b[0] = b[0], a[0]
 
 # a = [[3, 3], [2, 2]]
-# b = [[1, 1], [4, 4]]</code></pre><p id="0f61f6e2-71c8-4c00-8f9d-979ce25ba962" class="">但numpy.array無法支援此方法</p><pre id="bb93f74a-1a39-4a75-9b45-009263e18415" class="code"><code>import numpy as np
+# b = [[1, 1], [4, 4]]</code></pre><p id="4583da3a-f455-4d7a-9a32-0ef542797b69" class="">但numpy.array無法支援此方法</p><pre id="39edd545-1c43-4b73-a646-6ca0338432b0" class="code"><code>import numpy as np
 
 a = np.array([[1,1],[2,2]])
 b = np.array([[3,3],[4,4]])
@@ -745,6 +749,8 @@ b = np.array([[3,3],[4,4]])
 a[0], b[0] = b[0], a[0]
 
 # a = array([[3, 3], [2, 2]])
-# b = array([[3, 3], [4, 4]]) 交換失敗</code></pre></details></li></ul><ul id="656d69d1-faa2-43e5-b73c-c0425eca043d" class="toggle"><li><details open=""><summary>matplotlib</summary><p id="16939683-c636-4e20-8f6c-154a3fd7f4bb" class="">預防坐標軸單位超出圖片之外</p><pre id="bd82bd6d-8ea5-4d0e-9284-d29f3dd088c2" class="code"><code>plt.tight_layout()</code></pre></details></li></ul><p id="12a150b9-dbfe-42c1-a779-93a11b3ecc84" class="">
-</p><h3 id="0992e17f-6f02-4cd7-8720-632ccbcb45da" class="">reference</h3><ol type="1" id="0a220e01-5ea9-4292-b5d3-4269d454e237" class="numbered-list" start="1"><li><strong>Pythonic 實踐：實用的 python 慣用法整 </strong><a href="https://mropengate.blogspot.com/2020/07/pythonic-python.html">https://mropengate.blogspot.com/2020/07/pythonic-python.html</a></li></ol><ol type="1" id="126c190a-1d6b-435e-b10c-df6e9cc459ba" class="numbered-list" start="2"><li><strong><strong>Python - 淺複製(shallow copy)與深複製(deep copy) </strong></strong><a href="https://ithelp.ithome.com.tw/articles/10221255">https://ithelp.ithome.com.tw/articles/10221255</a></li></ol><ol type="1" id="f4ab89bc-834d-4d0e-a07b-257b3b68d606" class="numbered-list" start="3"><li><strong>Python matplotlib 官方文件 </strong><a href="https://matplotlib.org/">https://matplotlib.org</a></li></ol><p id="3a159a88-2295-41c0-b827-b12d45c64c12" class="">
-</p></div></article></body></html>
+# b = array([[3, 3], [4, 4]]) 交換失敗</code></pre></details></li></ul><ul id="75c620c2-3849-4db8-a89d-2686d5fc3b5e" class="toggle"><li><details open=""><summary>matplotlib</summary><p id="8e5a1db8-f409-43b3-812c-34f946d112ae" class="">防止坐標軸標籤出圖片之外</p><pre id="d39d890e-3c82-4c9e-a28e-397cbdb70e85" class="code"><code>plt.tight_layout()</code></pre></details></li></ul><p id="0f934860-1792-4bb9-9acb-9409cb7ffc8e" class="">
+</p><h3 id="bb408095-d56f-4c0f-962f-d96dc4fdf034" class="">reference</h3><ol type="1" id="4149608e-d6db-4280-894b-dc772b99c1c3" class="numbered-list" start="1"><li><strong>Pythonic 實踐：實用的 python 慣用法整 </strong><a href="https://mropengate.blogspot.com/2020/07/pythonic-python.html">https://mropengate.blogspot.com/2020/07/pythonic-python.html</a></li></ol><ol type="1" id="3662bc47-e4f5-42a6-a603-91b394d99fe7" class="numbered-list" start="2"><li><strong><strong>Python - 淺複製(shallow copy)與深複製(deep copy) </strong></strong><a href="https://ithelp.ithome.com.tw/articles/10221255">https://ithelp.ithome.com.tw/articles/10221255</a></li></ol><ol type="1" id="b8d75d87-8047-4cd3-9283-1b94aa820541" class="numbered-list" start="3"><li><strong>Python matplotlib 官方文件 </strong><a href="https://matplotlib.org/">https://matplotlib.org</a></li></ol><p id="59c29343-8c0e-4cb8-9192-6d187532a11b" class="">
+</p></div></article>
+<p class="float-end"><a class="btn btn-dark" href="#">Back to top</a></p>
+</body></html>

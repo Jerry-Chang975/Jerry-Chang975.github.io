@@ -7,13 +7,13 @@
     <meta name="author" content="Jerry, Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
     <title>Miigun 個人網站</title>
-
+    <link rel="icon" href="image/software-engineer.png">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/carousel/">
 
     
 
     <!-- Bootstrap core CSS -->
-<link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -24,7 +24,7 @@
         user-select: none;
       }
 
-      @media (min-width: 300px) {
+      @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
@@ -34,11 +34,12 @@
 
     
     <!-- Custom styles for this template -->
-<link href="custom.css" rel="stylesheet">
+    <link href="custom.css" rel="stylesheet">
     <style>
       .special{
         font-weight: bold;
       }
+      .anchor { padding-top: 50px; }
       
     </style>
 
@@ -53,24 +54,23 @@
     <div style="background-image: image/WebBackground"> </div>
 
     <header>
-      <nav class="navbar navbar-expand navbar-dark fixed-top shadow-lg bg-dark">
+      <nav class="navbar navbar-expand-sm navbar-dark fixed-top shadow-lg bg-dark">
         <div class="container-fluid">
-          <!-- icon -->
           <a href="index.html" class="navbar-brand align-items-center">
             <img src="image/software-engineer.png" alt="" width="40" height="40">
             <strong>Miigun's Blog</strong>
           </a>
-          <!-- 漢堡選單 -->
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+          <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar"
+          aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
+          <div class="collapse navbar-collapse" aria-expanded="false" id="myNavbar">
+            <ul class="navbar-nav">
               <li>
                 <a class="nav-link active" href="#">關於我</a>
-              </li>
+              </li> 
               <li>
-                <a class="nav-link active"  href="#project">專案</a>
+                <a class="nav-link active"  href="#project">個人專案</a>
               </li>
               <li>
                 <a class="nav-link active" href="https://sites.google.com/smail.nchu.edu.tw/pmtelab">研究室網頁</a>
@@ -79,14 +79,13 @@
           </div>
         </div>
       </nav>
-      
     </header>
 
     <main>
       <section class="py-5 text-center container">
-        <div class="row py-lg-5">
-          <div class="col-lg-10 col-md-8 mx-auto">
-            <h1 class="" id="aboutMe">About me</h1>
+        <div class="row py-xs-5">
+          <div class="col-xs-10 col-xs-8 mx-auto">
+            <h1 class="anchor" id="aboutMe">About me</h1>
             <hr>
             <p class="lead text-black font-monospace special" style="font-size: medi;">
               Hello~ 我是Jerry&#x1F601，目前是碩二生，就讀國立中興大學機械研究所。<br>
@@ -195,13 +194,13 @@
               </div> -->
 
               <div class="p-4 bg-light">
-                <h4 class="fst-italic">開發中...<div class=""></div></Article></h4>
-                <!-- <ol class="list-unstyled mb-0">
-                  <li><a href="#">Articles1</a></li>
-                  <li><a href="#">Articles2</a></li>
+                <h4 class="fst-italic">快速連結<div class=""></div></Article></h4>
+                <ol class="list-unstyled mb-0">
+                  <li><a href="/ResearchNote/Python基本資料.html" class="">Python資料處理</a></li>
+                  <!-- <li><a href="#">Articles2</a></li>
                   <li><a href="#">Articles3</a></li>
-                  <li><a href="#">Articles4</a></li>
-                </ol> -->
+                  <li><a href="#">Articles4</a></li> -->
+                </ol>
               </div>
 
               <div class="p-4">
@@ -228,9 +227,25 @@
 
     </main>
 
-    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
     <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     
+    <script>
+      // $(function(){
+      // if($(window).width()<480){ //當視窗小於480時才運作
+      // $('.navbar a').on('click', function(){
+      //     $('.navbar-toggle').click();
+      //   });
+      // }
+      // });
+      $('.navbar a').on('click', function()
+      {
+      //點擊時，如果已經沒有下一層選單的話，則再關閉navbar
+      if($(this).attr("data-bs-toggle") == undefined)
+      {
+      $('.navbar-toggle').click();
+      }
+      });
+    </script>
+
   </body>  
 </html>
