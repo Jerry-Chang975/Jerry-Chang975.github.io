@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Python基本資料處理</title>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Python資料處理</title>
 <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 <style>
 
@@ -657,7 +657,7 @@ blockquote {
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
 }
 	
-</style></head><body><article id="7694f07d-470d-4608-accb-b8f76838435c" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 50%"/><h1 class="page-title">Python基本資料處理</h1></header><div class="page-body"><h2 id="c18f9e7a-da1b-414d-898e-86121a9654de" class="">資料結構-陣列處理</h2><ul id="6eb04474-fd59-49a3-983e-a98a882bb023" class="toggle"><li><details open=""><summary>List陣列複製問題</summary><p id="74d6ee05-680f-4227-8d36-7ae9e492fe35" class="">EX:  下方程式碼執行結果，b_list 記憶體位址指向a_list，所以當a_list元素改變時，b_list 也會跟隨改變。</p><pre id="c3fc7e84-403a-4c72-b85a-2ac92f05f71c" class="code"><code>a_list = [[1,2,3], 3, 3, 1]
+</style></head><body><article id="7694f07d-470d-4608-accb-b8f76838435c" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 50%"/><h1 class="page-title">Python資料處理</h1></header><div class="page-body"><h2 id="c18f9e7a-da1b-414d-898e-86121a9654de" class="">資料結構-陣列處理</h2><ul id="6eb04474-fd59-49a3-983e-a98a882bb023" class="toggle"><li><details open=""><summary>List陣列複製問題</summary><p id="74d6ee05-680f-4227-8d36-7ae9e492fe35" class="">EX:  下方程式碼執行結果，b_list 記憶體位址指向a_list，所以當a_list元素改變時，b_list 也會跟隨改變。</p><pre id="c3fc7e84-403a-4c72-b85a-2ac92f05f71c" class="code"><code>a_list = [[1,2,3], 3, 3, 1]
 b_list = a_list # b_list為pointer
 a_list[0][1] = 0
 
