@@ -40,11 +40,21 @@
         font-weight: bold;
       }
       .anchor { padding-top: 50px; }
+
+      #btn-back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+      }
       
     </style>
 
   </head>
   <body>
+    <button type="button" class="btn btn-dark btn-floating btn-lg" id="btn-back-to-top">top
+      <i class="fas fa-arrow-up"></i>
+    </button>
     <div
     class="bg-image"
     style="
@@ -133,7 +143,7 @@
             <h2>程式學習筆記</h2>
             <p>雖然非電資背景，但對於軟體工程非常有興趣，利用閒暇之餘自學程式語言、資料結構與演算法等軟體知識，並將所學重點筆記下來。</p>
             <p><a class="btn btn-success" href="/ResearchNote/軟體知識筆記.html">View details &raquo;</a></p>
-          </div> -->
+          </div> -->           
         </div><!-- /.row -->
 
 
@@ -227,7 +237,6 @@
       <hr class="featurette-divider">
       <!-- FOOTER -->
       <footer class="container">
-        <p class="float-end"><a class="btn btn-dark" href="#">Back to top</a></p>
         <p>Miigun's personal blog</p>
       </footer>
 
@@ -236,21 +245,31 @@
     <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
     
     <script>
-      // $(function(){
-      // if($(window).width()<480){ //當視窗小於480時才運作
-      // $('.navbar a').on('click', function(){
-      //     $('.navbar-toggle').click();
-      //   });
-      // }
-      // });
-      $('.navbar a').on('click', function()
-      {
-      //點擊時，如果已經沒有下一層選單的話，則再關閉navbar
-      if($(this).attr("data-bs-toggle") == undefined)
-      {
-      $('.navbar-toggle').click();
-      }
-      });
+        //Get the button
+        let mybutton = document.getElementById("btn-back-to-top");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+          scrollFunction();
+        };
+
+        function scrollFunction() {
+          if (
+            document.body.scrollTop > 20 ||
+            document.documentElement.scrollTop > 20
+          ) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        // When the user clicks on the button, scroll to the top of the document
+        mybutton.addEventListener("click", backToTop);
+
+        function backToTop() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
     </script>
 
   </body>  

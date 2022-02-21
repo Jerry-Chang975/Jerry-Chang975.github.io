@@ -656,8 +656,22 @@ blockquote {
 .checkbox-off {
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
 }
+#btn-back-to-top {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	display: none;
+	width: 65px;
+	height: 50px;
+	}
 	
-</style></head><body><article id="7694f07d-470d-4608-accb-b8f76838435c" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 50%"/><h1 class="page-title">Python資料處理</h1></header><div class="page-body"><h2 id="c18f9e7a-da1b-414d-898e-86121a9654de" class="">資料結構-陣列處理</h2><ul id="6eb04474-fd59-49a3-983e-a98a882bb023" class="toggle"><li><details open=""><summary>List陣列複製問題</summary><p id="74d6ee05-680f-4227-8d36-7ae9e492fe35" class="">EX:  下方程式碼執行結果，b_list 記憶體位址指向a_list，所以當a_list元素改變時，b_list 也會跟隨改變。</p><pre id="c3fc7e84-403a-4c72-b85a-2ac92f05f71c" class="code"><code>a_list = [[1,2,3], 3, 3, 1]
+</style>
+</head>
+<body>
+	<button type="button" class="btn btn-dark btn-floating btn-lg" id="btn-back-to-top">top
+		<i class="fas fa-arrow-up"></i>
+	</button>
+	<article id="7694f07d-470d-4608-accb-b8f76838435c" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 50%"/><h1 class="page-title">Python資料處理</h1></header><div class="page-body"><h2 id="c18f9e7a-da1b-414d-898e-86121a9654de" class="">資料結構-陣列處理</h2><ul id="6eb04474-fd59-49a3-983e-a98a882bb023" class="toggle"><li><details open=""><summary>List陣列複製問題</summary><p id="74d6ee05-680f-4227-8d36-7ae9e492fe35" class="">EX:  下方程式碼執行結果，b_list 記憶體位址指向a_list，所以當a_list元素改變時，b_list 也會跟隨改變。</p><pre id="c3fc7e84-403a-4c72-b85a-2ac92f05f71c" class="code"><code>a_list = [[1,2,3], 3, 3, 1]
 b_list = a_list # b_list為pointer
 a_list[0][1] = 0
 
@@ -752,5 +766,34 @@ a[0], b[0] = b[0], a[0]
 # b = array([[3, 3], [4, 4]]) 交換失敗</code></pre></details></li></ul><ul id="75c620c2-3849-4db8-a89d-2686d5fc3b5e" class="toggle"><li><details open=""><summary>matplotlib</summary><p id="8e5a1db8-f409-43b3-812c-34f946d112ae" class="">防止坐標軸標籤出圖片之外</p><pre id="d39d890e-3c82-4c9e-a28e-397cbdb70e85" class="code"><code>plt.tight_layout()</code></pre></details></li></ul><p id="0f934860-1792-4bb9-9acb-9409cb7ffc8e" class="">
 </p><h3 id="bb408095-d56f-4c0f-962f-d96dc4fdf034" class="">reference</h3><ol type="1" id="4149608e-d6db-4280-894b-dc772b99c1c3" class="numbered-list" start="1"><li><strong>Pythonic 實踐：實用的 python 慣用法整 </strong><a href="https://mropengate.blogspot.com/2020/07/pythonic-python.html">https://mropengate.blogspot.com/2020/07/pythonic-python.html</a></li></ol><ol type="1" id="3662bc47-e4f5-42a6-a603-91b394d99fe7" class="numbered-list" start="2"><li><strong><strong>Python - 淺複製(shallow copy)與深複製(deep copy) </strong></strong><a href="https://ithelp.ithome.com.tw/articles/10221255">https://ithelp.ithome.com.tw/articles/10221255</a></li></ol><ol type="1" id="b8d75d87-8047-4cd3-9283-1b94aa820541" class="numbered-list" start="3"><li><strong>Python matplotlib 官方文件 </strong><a href="https://matplotlib.org/">https://matplotlib.org</a></li></ol><p id="59c29343-8c0e-4cb8-9192-6d187532a11b" class="">
 </p></div></article>
-<p class="float-end"><a class="btn btn-dark" href="#">Back to top</a></p>
+  
+<script>
+	//Get the button
+	let mybutton = document.getElementById("btn-back-to-top");
+
+	// When the user scrolls down 20px from the top of the document, show the button
+	window.onscroll = function () {
+	  scrollFunction();
+	};
+
+	function scrollFunction() {
+	  if (
+		document.body.scrollTop > 20 ||
+		document.documentElement.scrollTop > 20
+	  ) {
+		mybutton.style.display = "block";
+	  } else {
+		mybutton.style.display = "none";
+	  }
+	}
+	// When the user clicks on the button, scroll to the top of the document
+	mybutton.addEventListener("click", backToTop);
+
+	function backToTop() {
+	  document.body.scrollTop = 0;
+	  document.documentElement.scrollTop = 0;
+	}
+</script>
+<script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+
 </body></html>
