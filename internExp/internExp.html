@@ -30,26 +30,13 @@
         }
       
       }
+    
     </style>
 
     
     <!-- Custom styles for this template -->
-    <link href="custom.css" rel="stylesheet">
-    <style>
-      .special{
-        font-weight: bold;
-      }
-      .anchor { padding-top: 80px; }
-
-      #btn-back-to-top {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        display: none;
-      }
-      
-    </style>
-
+    <link href="/css_js_setting/custom.css" rel="stylesheet">
+    
   </head>
   <body>
     <button type="button" class="btn btn-dark btn-floating btn-lg" id="btn-back-to-top">top
@@ -99,14 +86,14 @@
                   <div class="row featurette">
                     <div class="col-md-8">
                       <h5 class="special">第一階段(110.3~110.8)</h5>
-                        <p class="lead" style="text-indent: 35px;">
+                        <p class="" style="text-indent: 35px;">
                           碩一下在指導老師的推薦下參與經濟部工業局的實習計畫，到中部的研究機構協助工程師研究工具機主軸之健康診斷，主要研究主題為: 工具機主軸之軸承預壓與溫度的相關性。
                         </p>
                       <h5 class="special">第二階段(110.10~111.3)</h5>
-                        <p class="lead" style="text-indent: 35px">
+                        <p class="" style="text-indent: 35px">
                           到同一實習公司的智慧製造部門繼續學習，工作內容包括:
-                          <li style="font-size: 20px">協助編寫後端資料庫之API</li>
-                          <li style="font-size: 20px">開發生產排程最佳化演算法</li>
+                          <li>協助編寫後端資料庫之API</li>
+                          <li>開發生產排程最佳化演算法</li>
                           
                         </p>
 
@@ -120,26 +107,26 @@
                   <div class="row featurette">
                     <div class="col-md-7 order-md-1">
                       <h3 class="special">主軸健康診斷研究</h3>
-                        <p class="lead" style="text-indent: 35px;">
+                        <p class="" style="text-indent: 35px;">
                           
                         </p>
-                        <p class="lead" style="text-indent: 35px;">
+                        <p class="" style="text-indent: 35px;">
                           主要探討主軸軸承預壓與溫度的關聯性，希望能透過溫度預測主軸軸承預壓，避免軸承預壓過高導致主軸毀損。因這個主題與在學校的研究較不相關，所以初期主要是收集相關文獻資料，先補足較不熟的知識。
                         </p>
-                        <p class="lead" style="text-indent: 35px;">
+                        <p class="" style="text-indent: 35px;">
                           參考軸承力學與熱力學相關書籍，初步推導出軸承預壓與溫度的數學關係式。原本要透過此關係式建立兩者之間的數學模型，並藉由溫度進行軸承預壓之預測，後來進行實驗發現理論推導與實際相差甚遠，故需另尋他法。
                         </p>
-                        <p class="lead" style="text-indent: 35px;">
+                        <p class="" style="text-indent: 35px;">
                           雖然關係式推算結果與實際誤差過大，但至少確定了軸承預壓與溫度有相當程度的關聯性。
                           後續引用機器學習(Machine Learning)相關技術進行建模，軸承溫度與對應預壓的資料能夠透過實驗取得，故可利用監督式學習建立兩者之間的數學模型。
                         </p>
                       
                       <h3 class="special">MES後端資料庫API開發</h3>
-                        <p class="lead" style="text-indent: 35px;">
+                        <p class="" style="text-indent: 35px;">
                           因個人對程式軟體開發較有興趣，所以第二階段實習則到同單位的智慧製造部門，主要的工作內容為協助工程師開發後端資料庫API，根據前端資料請求在從資料庫撈出對應的資料，前後端之間透過應用程式介面(API)進行溝通。
                         </p>
                       <h3 class="special">開發最佳化排程演算法</h3>
-                        <p class="lead" style="text-indent: 35px;">
+                        <p class="" style="text-indent: 35px;">
                           部門開發的生產管理系統(MES)有一個功能是針對產品製程進行排程，透過最佳化演算法(如: 基因演算法(GA)、粒子群演算法(PSO)搜尋最佳的排程組合。
                         </p>
 
@@ -165,6 +152,7 @@
                     <ol class="list-unstyled mb-0">
                       
                       <li><a href="../masterResearch/masterResearch.html">碩班研究</a></li>
+                      <li><a href="..//ResearchNote/PythonTk.html">Python tkinter</a></li>
                       <li><a href="..//ResearchNote/Python資料處理.html" class="">Python資料處理</a></li>
                       <!-- <li><a href="#">Articles3</a></li> -->
                       <!-- <li><a href="#">Articles4</a></li> -->
@@ -186,7 +174,7 @@
             <hr class="featurette-divider">
             <!-- FOOTER -->
             <footer class="container">
-              <p>Miigun's personal blog</p>
+              <p style="font-size: smaller">Miigun's personal blog</p>
             </footer>
           </div><!-- /.container -->
         </div>
@@ -194,34 +182,7 @@
     </main>
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/css_js_setting/custom.js"></script>
     
-    <script>
-        //Get the button
-        let mybutton = document.getElementById("btn-back-to-top");
-
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function () {
-          scrollFunction();
-        };
-
-        function scrollFunction() {
-          if (
-            document.body.scrollTop > 20 ||
-            document.documentElement.scrollTop > 20
-          ) {
-            mybutton.style.display = "block";
-          } else {
-            mybutton.style.display = "none";
-          }
-        }
-        // When the user clicks on the button, scroll to the top of the document
-        mybutton.addEventListener("click", backToTop);
-
-        function backToTop() {
-          document.body.scrollTop = 0;
-          document.documentElement.scrollTop = 0;
-        }
-    </script>
-
   </body>  
 </html>

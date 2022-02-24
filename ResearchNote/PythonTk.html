@@ -1,1 +1,184 @@
-<h1>&#9940開發中...</h1>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="personal blog">
+    <meta name="author" content="Jerry, Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>學習筆記-Python tkinter GUI</title>
+    <link rel="icon" href="image/software-engineer.png">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/carousel/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+        
+      }
+      div, p{
+          font-size: large;
+      }
+      
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="/css_js_setting/custom.css" rel="stylesheet">
+    <style>
+      
+      
+    </style>
+
+  </head>
+  <body>
+    <button type="button" class="btn btn-dark btn-floating btn-lg" id="btn-back-to-top">top
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    <div
+    class="bg-image"
+    style="
+      background-image: url('../image/WebBackground2.jpg');
+      background-size: cover;;
+      ">
+    <div style="background-image: image/WebBackground"> </div>
+
+    <header>
+      <nav class="navbar navbar-expand-sm navbar-dark fixed-top shadow-lg bg-dark">
+        <div class="container-fluid">
+          <a href="PythonTk.html" class="navbar-brand align-items-center">
+            <img src="../image/software-engineer.png" alt="" width="36" height="36">
+            <strong>學習筆記</strong>
+          </a>
+          <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar"
+          aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" aria-expanded="false" id="myNavbar">
+            <ul class="navbar-nav">
+              <li>
+                <a class="nav-link active" href="../index.html">回首頁</a>
+              </li> 
+              <!-- <li>
+                <a class="nav-link active" href="https://sites.google.com/smail.nchu.edu.tw/pmtelab">研究室網頁</a>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="anchor special">Python tkinter</h1>
+            <hr class="featurette-divider">
+            
+            <div class="row">
+              <div class="col-md-9">
+                  <div class="row featurette">
+                      <div class="col-md-8" style="text-indent: 35px;">
+                        tkinter為Python原生的視窗應用程式套件，所以只要有原本的Python環境即可開發，不用下載其他的library。
+                        雖然需要透過程式碼編寫介面，但還算易於使用，適合初學者開發功能較單純的使用介面。
+                      </div>
+                      <div class="col-md-4">
+                          <img src="/image/pythonTkinterGUI.JPG" alt="" width="250">
+                      </div>
+                      <h2 class="special">範例實作</h2>
+                      <hr class="featurette-divider">
+                      <div>
+                        <h4 class="special">視窗基礎設定</h4>
+                            <p>首先將tkinter的模組引用(import)進來，並把他簡稱為tk</p>
+                            <pre class="code"><code>import tkinter as tk</code></pre>
+                            <p>建立一個tkinter物件，並且加入維持視窗運行的method</p>
+                            <pre class="code"><code>win = tk.Tk() <br>win.mainloop() # 維持視窗顯示的迴圈，沒有這行程式碼視窗無法維持顯示</code></pre>
+                            <p>此時應該可以叫出一個空白視窗出來</p>
+                            <img src="/image/tksimpleGUI.JPG" alt="" width="160">
+                            <p>呼叫title的方法去設定視窗最上方的標題名稱</p>
+                            <pre class="code"><code>win.title("Python tkinter")</code></pre>
+                            <p>也可以更改視窗左上的圖標，ico檔必須放在同目錄底下</p>
+                            <pre class="code"><code>win.iconbitmap("PythonIcon.ico")</code></pre>
+                            <p>調整視窗大小</p>
+                            <pre class="code"><code>win.geometry("400x300")#400是橫軸長度; 300是縱軸長度</code></pre>
+                            <p>更改視窗的背景顏色，透過config去更改win視窗內的屬性</p>
+                            <pre class="code"><code>win.config(bg="skyblue") # 更改bg屬性，顏色可以用字典key或16進位hex code指定</code></pre>
+                            <p>視窗文字設定</p>
+                            <pre class="code"><code>win.geometry("400x300")#400是橫軸長度; 300是縱軸長度</code></pre>
+                            <p>上方程式碼設定完成後，視窗顯示結果如下</p>
+                            <img src="/image/tksimpleGUI1.JPG" alt="" width="200">
+                            <hr class="featurette-divider">
+
+                        <h4 class="special">視窗文字設定</h4>
+                          <p>待新增...</p>
+                            <!-- <p>要在視窗裡放置文字，須建立一個文字物件</p> -->
+                            
+                      </div>
+                      
+                  </div>
+    
+                  
+                  
+              </div>
+              
+    
+              <div class="col-md-3">
+                <div class="position-sticky" style="top: 2rem;">
+                  <!-- <div class="p-4 mb-3 bg-light rounded">
+                    <h4 class="fst-italic">About</h4>
+                    <p class="mb-0">Customize this section to tell your visitors a little bit about your publication, writers, content, or something else entirely. Totally up to you.</p>
+                  </div> -->
+    
+                  <div class="p-4 bg-light">
+                    <h4 class="fst-italic">快速連結<div class=""></div></Article></h4>
+                    <ol class="list-unstyled mb-0">
+                      <li><a href="../masterResearch/masterResearch.html">碩班研究</a></li>
+                      <li><a href="../internExp/internExp.html">實習經驗</a></li>
+                      <li><a href="../ResearchNote/Python資料處理.html" class="">Python資料處理</a></li>
+                      <!-- <li><a href="#">Articles4</a></li> -->
+                    </ol>
+                  </div>
+    
+                  <div class="p-4">
+                    <h5>Contact me</h5>
+                    <ol class="list-unstyled">
+                      <li><img src="../image/githubIcon.png" alt="" width="20" height="20"><a href="https://github.com/Jerry-Chang975">GitHub</a></li>
+                      <li><a href="mailto: jerry975607@gmail.com">Gmail</a></li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /END THE FEATURETTES -->
+    
+            <hr class="featurette-divider">
+            <!-- FOOTER -->
+            <footer class="container">
+              <p style="font-size: smaller">Miigun's personal blog</p>
+            </footer>
+          </div><!-- /.container -->
+          
+        </div>
+        
+      
+      
+
+    </main>
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/css_js_setting/custom.js"></script>
+
+  </body>  
+</html>

@@ -30,23 +30,14 @@
         }
       
       }
+      
+
     </style>
 
     
     <!-- Custom styles for this template -->
-    <link href="custom.css" rel="stylesheet">
+    <link href="/css_js_setting/custom.css" rel="stylesheet">
     <style>
-      .special{
-        font-weight: bold;
-      }
-      .anchor { padding-top: 50px; }
-
-      #btn-back-to-top {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        display: none;
-      }
       
     </style>
 
@@ -141,22 +132,23 @@
 
 
         <!-- START THE FEATURETTES -->
+        <div class="container"> 
         <h1 class="bold">學習筆記</h1>
         <hr class="featurette-divider">
         
         <div class="row">
           <div class="col-md-9">
               <div class="row featurette">
-                <div class="col-md-8">
+                <div class="col-md-7">
                     <h3 class="featurette-heading">Python tkinter GUI 開發</h3>
-                    <p class="lead">
+                    <p>
                       tkinter為Python原生的視窗應用程式套件，所以只要有原本的Python環境即可開發，不用下載其他的library。<br>
                       雖然需要透過程式碼編寫介面，但還算易於使用，適合初學者開發功能較單純的使用介面。
                     </p>
                     <p><a class="btn btn-success" href="/ResearchNote/PythonTk.html">View details &raquo;</a></p>
                   
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-5">
                   <img src="/image/pythonTkinterGUI.JPG" alt="" width="300">
                 </div>
                 
@@ -165,14 +157,14 @@
               <hr class="featurette-divider">
 
               <div class="row featurette">
-                <div class="col-md-8 order-md-2">
+                <div class="col-md-7 order-md-2">
                   <h3 class="featurette-heading">Python資料處理</h3>
-                  <p class="lead">
+                  <p>
                     記錄使用Python進行資料處理上的一些技巧。
                   </p>
                   <p><a class="btn btn-success" href="/ResearchNote/Python資料處理.html">View details &raquo;</a></p>
                 </div>
-                <div class="col-md-4 order-md-1">
+                <div class="col-md-5 order-md-1">
                   <img src="/image/pythonCode.jpg" alt="" width="300">
                 </div>
               </div>
@@ -187,13 +179,14 @@
                 <p class="mb-0">Customize this section to tell your visitors a little bit about your publication, writers, content, or something else entirely. Totally up to you.</p>
               </div> -->
 
-              <div class="p-4 bg-light">
+              <div class="p-3 bg-light">
                 <h4 class="fst-italic">快速連結<div class=""></div></Article></h4>
                 <ol class="list-unstyled mb-0">
                   <li><a href="/masterResearch/masterResearch.html">碩班研究</a></li>
                   <li><a href="/internExp/internExp.html">實習經驗</a></li>
+                  <li><a href="/ResearchNote/PythonTk.html">Python tkinter</a></li>
                   <li><a href="/ResearchNote/Python資料處理.html" class="">Python資料處理</a></li>
-                  <!-- <li><a href="#">Articles3</a></li> -->
+                  
                   <!-- <li><a href="#">Articles4</a></li> -->
                 </ol>
               </div>
@@ -209,46 +202,22 @@
           </div>
         </div>
         <!-- /END THE FEATURETTES -->
-
+      </div>
      
       </div><!-- /.container -->
       
       <hr class="featurette-divider">
       <!-- FOOTER -->
       <footer class="container">
-        <p>Miigun's personal blog</p>
+        <p style="font-size: smaller">Miigun's personal blog</p>
       </footer>
 
     </main>
 
     <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
-    
+    <script src="/css_js_setting/custom.js"></script>
     <script>
-        //Get the button
-        let mybutton = document.getElementById("btn-back-to-top");
-
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function () {
-          scrollFunction();
-        };
-
-        function scrollFunction() {
-          if (
-            document.body.scrollTop > 20 ||
-            document.documentElement.scrollTop > 20
-          ) {
-            mybutton.style.display = "block";
-          } else {
-            mybutton.style.display = "none";
-          }
-        }
-        // When the user clicks on the button, scroll to the top of the document
-        mybutton.addEventListener("click", backToTop);
-
-        function backToTop() {
-          document.body.scrollTop = 0;
-          document.documentElement.scrollTop = 0;
-        }
+       
     </script>
 
   </body>  

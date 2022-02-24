@@ -28,27 +28,15 @@
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
-      
+        
       }
+    
     </style>
 
     
     <!-- Custom styles for this template -->
-    <link href="custom.css" rel="stylesheet">
-    <style>
-      .special{
-        font-weight: bold;
-      }
-      .anchor { padding-top: 80px; }
-
-      #btn-back-to-top {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        display: none;
-      }
-      
-    </style>
+    <link href="/css_js_setting/custom.css" rel="stylesheet">
+  
 
   </head>
   <body>
@@ -58,7 +46,7 @@
     <div
     class="bg-image"
     style="
-      background-image: url('../image/WebBackground.jpg');
+      background-image: url('../image/WebBackground1.jpg');
       background-size: cover;;
       ">
     <div style="background-image: image/WebBackground"> </div>
@@ -98,7 +86,7 @@
                   <div class="row featurette">
                     <div class="col-md-7">
                       <h3 class="special">公差設計</h3>
-                        <p class="lead" style="text-indent: 35px;">
+                        <p class="" style="text-indent: 35px;">
                             產品在設計階段需根據本身的目標精度與性能，設計出符合需求的公差值，
                             且也需考量生產成本與製程難度是否超出預期，以上種種因素都是產品公差設計須考量的重點。
                         </p>
@@ -113,7 +101,7 @@
                   <div class="row featurette">
                     <div class="col-md-10 order-md-1">
                       <h3 class="special">公差分析</h3>
-                        <p class="lead" style="text-indent: 35px;">
+                        <p class="" style="text-indent: 35px;">
                             要設計出符合需求的公差，通常需要完善的公差分析方法與流程，藉以輔助設計所需滿足的目標。
                             其流程如下:
                         </p>
@@ -129,10 +117,10 @@
                   <div class="row featurette">
                     <div class="col-md-7 order-md-1">
                       <h3 class="special">公差分析軟體開發</h3>
-                        <p class="lead" style="text-indent: 35px;">
+                        <p class="" style="text-indent: 35px;">
                           透過程式開發自動化公差分析系統，輔助設計者能更容易進行公差分析，縮短產品於設計階段的開發時間。
                         </p>
-                        <p class="lead" style="text-indent: 35px;">
+                        <p class="" style="text-indent: 35px;">
                           右圖為本人在碩班時所開發的公差分析軟體介面，其GUI是利用Python tkinter套件設計而成，而背後公差分析運算則是透過Python基本語法與套件所編寫而成的演算法。
                         </p>
                         
@@ -144,35 +132,7 @@
                     </div>
                   </div>
     
-                  <!-- <hr class="featurette-divider"> -->
-    
-                  <!-- <div class="row featurette">
-                    <div class="col-md-7 order-md-2">
-                      <h3 class="featurette-heading">Python資料處理</h3>
-                      <p class="lead">
-                        記錄使用Python進行資料處理上的一些技巧。
-                      </p>
-                      <p><a class="btn btn-success" href="/ResearchNote/Python資料處理.html">View details &raquo;</a></p>
-                    </div>
-                    <div class="col-md-5 order-md-1">
-                      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-    
-                    </div>
-                  </div> -->
-    
-                  <!-- <hr class="featurette-divider">
-    
-                  <div class="row featurette">
-                    <div class="col-md-7">
-                      <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-                      <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
-                    </div>
-                    <div class="col-md-5">
-                      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-    
-                    </div>
-                  </div> -->
-    
+                  
                   
               </div>
               
@@ -188,6 +148,7 @@
                     <h4 class="fst-italic">快速連結<div class=""></div></Article></h4>
                     <ol class="list-unstyled mb-0">
                       <li><a href="../internExp/internExp.html">實習經驗</a></li>
+                      <li><a href="..//ResearchNote/PythonTk.html">Python tkinter</a></li>
                       <li><a href="../ResearchNote/Python資料處理.html" class="">Python資料處理</a></li>
                       <!-- <li><a href="#">Articles4</a></li> -->
                     </ol>
@@ -208,7 +169,7 @@
             <hr class="featurette-divider">
             <!-- FOOTER -->
             <footer class="container">
-              <p>Miigun's personal blog</p>
+              <p style="font-size: smaller">Miigun's personal blog</p>
             </footer>
           </div><!-- /.container -->
           
@@ -220,34 +181,8 @@
     </main>
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/css_js_setting/custom.js"></script>
     
-    <script>
-        //Get the button
-        let mybutton = document.getElementById("btn-back-to-top");
-
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function () {
-          scrollFunction();
-        };
-
-        function scrollFunction() {
-          if (
-            document.body.scrollTop > 20 ||
-            document.documentElement.scrollTop > 20
-          ) {
-            mybutton.style.display = "block";
-          } else {
-            mybutton.style.display = "none";
-          }
-        }
-        // When the user clicks on the button, scroll to the top of the document
-        mybutton.addEventListener("click", backToTop);
-
-        function backToTop() {
-          document.body.scrollTop = 0;
-          document.documentElement.scrollTop = 0;
-        }
-    </script>
 
   </body>  
 </html>
