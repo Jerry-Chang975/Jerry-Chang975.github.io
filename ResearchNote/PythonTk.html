@@ -120,8 +120,31 @@
                             <hr class="featurette-divider">
 
                         <h4 class="special">視窗文字設定</h4>
-                          <p>待新增...</p>
-                            <!-- <p>要在視窗裡放置文字，須建立一個文字物件</p> -->
+                            <p>要在視窗裡放置文字，須建立一個tkinter裡的Label物件。</p>
+                            <p>在創立Label物件時，會有幾個常見的屬性可以調整。</p>
+                            <ol>
+                              <li>第一個參數為label要放置的容器名稱，目前只有主視窗win。tkinter還有其他容器物件如: Frame, Canvas</li>
+                              <li>text為label欲顯視的文字內容</li>
+                              <li>font為字體的設定(字體樣式, 字體大小, 粗體字)</li>
+                              <li>bg可調整label背景顏色</li>
+                            </ol>
+                            <pre class="code"><code>label1 = tk.Label(win, # Label要顯示的視窗
+                  text="Python tkinter", # label的文字內容
+                  font=('Microsoft JhengHei UI', 20, 'bold'), # 設定字體樣式
+                  bg="skyblue" # 背景顏色)</code></pre>
+                            <p>label放置位置，tkinter元件的放置位置主要有三種方法: pack, grid, place</p>
+                            <p>這邊先說明place的使用方式，place是透過絕對座標(x,y)來指定元件位置。用法如下: </p>
+                            <pre class="code"><code>label_1.place(x=80, y=100) # 放置位置</code></pre>
+                            <img src="/image/tksimpleGUI2.JPG" alt="" width="200">
+                            <p>其他內容待新增...&#128679</p>
+
+
+                            <hr class="featurette-divider">
+                            <h3>reference</h3>
+                            <ol>
+                              <li>Python tkinter 官方文件 https://docs.python.org/3/library/tk.html</li>
+                              <li>如何使用 Python Tkinter 製作 GUI 應用程式入門教學：https://blog.techbridge.cc/2019/09/21/how-to-use-python-tkinter-to-make-gui-app-tutorial/</li>
+                            </ol>
                             
                       </div>
                       
