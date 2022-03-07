@@ -105,7 +105,7 @@
                             <pre class="code"><code>import tkinter as tk</code></pre>
                             <p>建立一個tkinter物件，並且加入維持視窗運行的method</p>
                             <pre class="code"><code>win = tk.Tk() <br>win.mainloop() # 維持視窗顯示的迴圈，沒有這行程式碼視窗無法維持顯示</code></pre>
-                            <p>此時應該可以叫出一個空白視窗出來</p>
+                            <p>此時可以叫出一個空白視窗出來</p>
                             <img src="/image/tksimpleGUI.JPG" alt="" width="160">
                             <p>呼叫title的方法去設定視窗最上方的標題名稱</p>
                             <pre class="code"><code>win.title("Python tkinter")</code></pre>
@@ -124,7 +124,7 @@
                             <p>在創立Label物件時，會有幾個常見的屬性可以調整。</p>
                             <ol>
                               <li>第一個參數為label要放置的容器名稱，目前只有主視窗win。tkinter還有其他容器物件如: Frame, Canvas</li>
-                              <li>text為label欲顯視的文字內容</li>
+                              <li>text為label欲顯示的文字內容</li>
                               <li>font為字體的設定(字體樣式, 字體大小, 粗體字)</li>
                               <li>bg可調整label背景顏色</li>
                             </ol>
@@ -136,6 +136,29 @@
                             <p>這邊先說明place的使用方式，place是透過絕對座標(x,y)來指定元件位置。用法如下: </p>
                             <pre class="code"><code>label_1.place(x=80, y=100) # 放置位置</code></pre>
                             <img src="/image/tksimpleGUI2.JPG" alt="" width="200">
+                            <hr class="featurette-divider">
+                            
+                        <h4 class="special">按鈕事件</h4>
+                            <p>要建立按鈕功能，可透過tkinter實體化Button物件</p>
+                            <ol>
+                              <li>第一個參數為button要放置的容器名稱，這裡放在主視窗win</li>
+                              <li>text為button欲顯示的文字內容</li>
+                              <li>width, height分別可以調整Button的長寬大小</li>
+                              <li>command為點擊此按鈕所要觸發的事件</li>
+                            </ol>
+                            <pre class="code"><code># button <br>btn_1 = tk.Button(win, # Button要顯示的視窗
+                  text="按鈕一", # Button的文字內容
+                  width = 15, # Button的寬度
+                  height = 1, # Button的高度
+                  command=btn_cmd) # 按鈕點擊事件，呼叫function名</code></pre>
+                            <p>button事件須建立一個function進行觸發，這裡簡單建立一個function名為btn_cmd，按鈕點擊後會改變按鈕的文字。</p>
+                            <pre class="code"><code>def btn_cmd():
+    btn_1.config(text="你已點擊此按鈕!") # 利用config方法重新賦予Button新的text屬性</code></pre>
+                            <p>點擊按鈕前</p>
+                            <img src="/image/tksimpleGUI3.JPG" alt="" width="200">
+                            <p>點擊後...</p>
+                            <img src="/image/tksimpleGUI4.JPG" alt="" width="200">
+                            
                             <p>其他內容待新增...&#128679</p>
 
 
