@@ -1,0 +1,39 @@
+name: 'Automatic build'
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - .gitignore
+      - README.md
+      - LICENSE
+
+jobs:
+  continuous-delivery:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  # for posts's lastmod
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+          bundler-cache: true
+          
+      - name: Build Site
+        env:
+          JEKYLL_ENV: production
+        run: |
+          bundle exec jekyll b
+          if [[ -n $SPEC_TEST ]]; then
+            # Bypass the defects of htmlproofer
+            bundle exec jekyll b -b "" -d "$SPEC_TEST"
+          fi
+
+      - name: Deploy
+        run: bash tools/deploy.sh
