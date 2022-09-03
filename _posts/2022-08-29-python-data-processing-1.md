@@ -3,7 +3,7 @@ title: Python 基本資料處理-list複製與排序
 author: Miigun
 date: 2022-08-29 05:33:00 +0800
 categories: [Python, data]
-tags: [Python]
+tags: [Python, data]
 math: true
 pin: false
 ---
@@ -160,7 +160,7 @@ pin: false
   # b = [[1, 1], [4, 4]]
   ```
 
-    
+  以上為筆者過去利用Python進行資料分析時，處理list資料可能會遇到的一些坑，在此分享處理方法，**僅供參考~**
     
     
 
