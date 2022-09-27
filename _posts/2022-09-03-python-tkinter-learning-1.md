@@ -8,7 +8,7 @@ math: true
 pin: false
 ---
 
-與大家分享本人在Python開發上的經驗，**只是個人的小小經驗，僅供參考**。
+與大家分享本人在Python開發上的筆記，**只是個人的小小經驗，僅供參考**。
 
 ---
 
@@ -31,7 +31,7 @@ win.mainloop() # 維持視窗顯示的迴圈，沒有這行程式碼視窗無法
 
 執行後可以叫出一個空白視窗出來
 
-![tksimpleGUI.JPG](/assets/img/postpictures/tksimpleGUI.jpg)
+![tksimpleGUI.JPG](/assets/img/postpictures/tkinter/tksimpleGUI.jpg)
 
 呼叫視窗物件的`title`方法去設定視窗最上方的標題名稱
 
@@ -65,7 +65,7 @@ win.mainloop() # 維持視窗顯示的迴圈，沒有這行程式碼視窗無法
 
 上方程式碼寫完後，執行一下可以看到…
 
-![tksimpleGUI1.JPG](/assets/img/postpictures/tksimpleGUI1.jpg)
+![tksimpleGUI1.JPG](/assets/img/postpictures/tkinter/tksimpleGUI1.jpg)
 
 - 完整程式碼
 
@@ -113,7 +113,7 @@ label_1 = tk.Label(win, # Label要顯示的容器
 label_1.place(x=80, y=100) # 值的單位為pixel
 ```
 
-![tksimpleGUI2.JPG](/assets/img/postpictures/tksimpleGUI2.jpg)
+![tksimpleGUI2.JPG](/assets/img/postpictures/tkinter/tksimpleGUI2.jpg)
 
 ## 按鈕元件與觸發事件
 
@@ -146,11 +146,11 @@ def btn_cmd():
 
 **點擊按鈕前**
 
-![tksimpleGUI3.JPG](/assets/img/postpictures/tksimpleGUI3.jpg)
+![tksimpleGUI3.JPG](/assets/img/postpictures/tkinter/tksimpleGUI3.jpg)
 
 **點擊後…**
 
-![tksimpleGUI4.JPG](/assets/img/postpictures/tksimpleGUI4.jpg)
+![tksimpleGUI4.JPG](/assets/img/postpictures/tkinter/tksimpleGUI4.jpg)
 
 ## 文字輸入窗格
 
@@ -174,7 +174,7 @@ entrybox_1.place(x=80, y=150)
 
 執行後，就會多出一個文字輸入窗格啦~
 
-![tksimpleGUI5.png](/assets/img/postpictures/tksimpleGUI5.png)
+![tksimpleGUI5.png](/assets/img/postpictures/tkinter/tksimpleGUI5.png)
 
 - 綜合運用
 1. 使用者輸入一些東西到文字窗格
@@ -230,11 +230,11 @@ win.mainloop() # 維持視窗顯示的迴圈，沒有這行程式碼視窗無法
 
 執行後…
 
-![tksimpleGUI6.png](/assets/img/postpictures/tksimpleGUI6.png)
+![tksimpleGUI6.png](/assets/img/postpictures/tkinter/tksimpleGUI6.png)
 
 輸入完文字點擊按鈕後…
 
-![tksimpleGUI7.png](/assets/img/postpictures/tksimpleGUI7.png)
+![tksimpleGUI7.png](/assets/img/postpictures/tkinter/tksimpleGUI7.png)
 
 以上是簡單的視窗程式開發分享，後續會再更新其他tkinter更進階的視窗元件與應用~
 
