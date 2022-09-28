@@ -24,7 +24,7 @@ pin: false
 
 ![cnnConv.png](/assets/img/postpictures/opencv/cnnConv.png)
 
-*卷積層運作示意圖*   [Source](https://www.ibm.com/cloud/learn/convolutional-neural-networks)
+*卷積層運作示意圖* [Source](https://www.ibm.com/cloud/learn/convolutional-neural-networks)
 
 ## 影像處理-OpenCV
 
@@ -90,7 +90,7 @@ gray_img = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 
 ![OpenCV_grayImg.jpg](/assets/img/postpictures/opencv/OpenCV_grayImg.jpg)
 
-### 常見的圖片處理方法: 模糊化(blur)、邊緣化 (canny)、膨脹、侵蝕
+### 常見的圖片處理方法: 模糊化、邊緣化、膨脹、侵蝕
 
 - **模糊化 (blur)**
     
@@ -163,6 +163,8 @@ gray_img = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
     ![OpenCV_erodeImg.jpg](/assets/img/postpictures/opencv/OpenCV_erodeImg.jpg)
     
     倉鼠的眼睛變更黑了(有點可怕XD)
+
+影像做完適當的前處理後，更能凸顯重要的特徵，增加影像辨識的成功率。後續將會再繼續說明建立影像辨識模型的方法~
     
 
 ### Reference
