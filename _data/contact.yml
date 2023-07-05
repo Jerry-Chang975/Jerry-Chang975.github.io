@@ -1,16 +1,13 @@
 #  The contact options.
 
--
-  type: github
-  icon: 'fab fa-github'
--
-  type: facebook
-  icon: 'fab fa-facebook'
-  url: 'https://www.facebook.com/profile.php?id=100003926459229'
--
-  type: email
-  icon: 'fas fa-envelope'
-  noblank: true            # open link in current tab
+- type: github
+  icon: "fab fa-github"
+- type: linkedin
+  icon: "fab fa-linkedin"
+  url: "https://www.linkedin.com/in/%E5%BC%B5-%E6%96%87%E5%93%B2-1766b0152/"
+- type: email
+  icon: "fas fa-envelope"
+  noblank: true # open link in current tab
 
 # Uncomment and complete the url below to enable more contact options
 # -
