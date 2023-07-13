@@ -1,5 +1,5 @@
 ---
-title: Python tkinter 做出簡單的視窗應用程式(1)
+title: Python tkinter 做出簡單的視窗應用程式
 author: Miigun
 date: 2022-09-3 14:47:00 +0800
 categories: [Python, tkinter]

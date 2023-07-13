@@ -1,5 +1,5 @@
 ---
-title: 影像辨識(1)-利用OpenCV進行影像處理
+title: 影像辨識-利用OpenCV進行影像處理
 author: Miigun
 date: 2022-09-28 00:20:00 +0800
 categories: [Python, OpenCV]
